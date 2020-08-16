@@ -1,6 +1,6 @@
 <template>
-    <div class="h-100 display-flex-flex-flex-flex center" :class="className">
-        <p>{{content}}</p>
+    <div class="h-100 display-flex-flex-flex-flex" :class="className">
+        <slot class="margin-l-0-0-0" name="content"></slot>
     </div>
 </template>
 
@@ -25,5 +25,8 @@ export default {
     @import 'node_modules/metabeta-design-system/metabeta/assets/styles/partials/_mb_utility.scss';
     .center{
         @include flex-center-center;
+    }
+    .grid-mixin{
+        @include grid-mixin(5, 'col', true, 250px, 'start');
     }
 </style>

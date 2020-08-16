@@ -1,5 +1,5 @@
 <template>
-  <div class="preview margin-l-0-0-0 h-100">
+  <div class="preview h-100 padding-0-xl">
         <p class="text-s"> {{text}} </p>
   </div>
 </template>
@@ -18,8 +18,9 @@ export default {
 <style lang="scss">
 @import 'node_modules/metabeta-design-system/metabeta/assets/styles/partials/_mb_color.scss';
 @import 'node_modules/metabeta-design-system/metabeta/assets/styles/partials/_mb_space.scss';
+@import 'node_modules/metabeta-design-system/metabeta/assets/styles/partials/_mb_utility.scss';
 .preview{
-    padding: $space-xxl;
+    @include flex-center-center();
     @include border-radius(s);
     @include shadow($space-xxxl, "bottom", $color-gray-900);
 }

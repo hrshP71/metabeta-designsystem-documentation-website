@@ -1,5 +1,5 @@
 <template>
-  <div class="code-block bg-purple-800 margin-l-0-0-0 h-100">
+  <div class="code-block bg-purple-800 h-100">
       <span class="markup">
           &lt;{{markup}} <span class="markup-definition"> class= </span>
       </span>
@@ -33,6 +33,7 @@ export default {
     .code-block{
         @include border-radius(s);
         @include shadow($space-xxxl, "bottom", $color-gray-900);
+        height: 200px;
         padding: $space-xxl;
         .markup{
             color: $color-teal-600;

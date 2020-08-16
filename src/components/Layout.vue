@@ -356,34 +356,34 @@
                             bg-yellow-900 <br /> $color-yellow-900
                         </div>
                     </div>
-                    <div class="colorbox padding-l-0-0 bg-gray-100">
+                    <div class="colorbox bg-gray-100">
                         bg-gray-100 <br /> $color-gray-100
                     </div>
-                    <div class="colorbox padding-l-0-0 bg-gray-200">
+                    <div class="colorbox bg-gray-200">
                         bg-gray-200 <br /> $color-gray-200
                     </div>
-                    <div class="colorbox padding-l-0-0 bg-gray-300">
+                    <div class="colorbox bg-gray-300">
                         bg-gray-300 <br /> $color-gray-300
                     </div>
-                    <div class="colorbox padding-l-0-0 bg-gray-400">
+                    <div class="colorbox bg-gray-400">
                         bg-gray-400 <br /> $color-gray-400
                     </div>
-                    <div class="colorbox padding-l-0-0 bg-gray-500">
+                    <div class="colorbox bg-gray-500">
                         bg-gray-500 <br /> $color-gray-500
                     </div>
-                    <div class="colorbox padding-l-0-0 bg-gray-600">
+                    <div class="colorbox bg-gray-600">
                         bg-gray-600 <br /> $color-gray-600
                     </div>
-                    <div class="colorbox padding-l-0-0 bg-gray-700">
+                    <div class="colorbox bg-gray-700">
                         bg-gray-700 <br /> $color-gray-700
                     </div>
-                    <div class="colorbox padding-l-0-0 bg-gray-800">
+                    <div class="colorbox bg-gray-800">
                         bg-gray-800 <br /> $color-gray-800
                     </div>
-                    <div class="colorbox padding-l-0-0 bg-gray-900">
+                    <div class="colorbox bg-gray-900">
                         bg-gray-900 <br /> $color-gray-900
                     </div>
-                    <div class="colorbox padding-l-0-0">
+                    <div class="colorbox">
                         bg-transparent <span class="desc-xs padding-s-xs-0-xs"> (Jk we don't have a class for it,though
                             there's a variable! <br /> $color-transparent) </span>
                     </div>
@@ -398,16 +398,16 @@
                     <p class="caption-s margin-m-0">
                         Our design system supports a truely unique feature &amp; control is entirely on your hand
                     </p>
-                    <p class="bg-red-500 padding-s-s">Important! This framework is always<span
+                    <p class="bg-indigo-800 padding-s-s">Important! This framework is always<span
                             class="bg-yellow-500 padding-0-s margin-0-s-0-s caption-xl"> desktop first </span>in all
                         related features, we fully support down to mobile devices. So please do keep this in mind from
                         this point below.</p>
                 </div>
             </div>
         </div>
-        <div class="mb-flex-container">
+        <div class="mb-flex-container margin-xl-0-0-0">
             <div class="mb-flex-row">
-                <div class="mb-col-2-1-1-1">
+                <div class="mb-col-2-1-1-1 margin-s-0">
                     <mb-html markup="div" classText="mb-flex-container">
                         <template slot="inner">
                             <br />
@@ -422,19 +422,109 @@
                         </template>
                     </mb-html>
                 </div>
-                <div class="mb-col-2-1-1-1">
-                    <mb-description text="This is regular flex-container, limited by 1600px so web application doesn't scale up to huge screen sizes, when vue components are available, there will be skeletons for the same functionality as a component." />
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-description
+                        text="This is regular flex-container, limited by 1600px so web application doesn't scale up to huge screen sizes, when vue components are available, there will be skeletons for the same functionality as a component." />
                 </div>
-                <div class="mb-col-2-1-1-1 margin-l-0-0-0">
-                    <mb-html markup="div" classText="mb-col-4-3-2-1"></mb-html>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-html markup="div" classText="mb-col-4-3-2-1">
+                        <template slot="inner"> <br /> </template>
+                    </mb-html>
                 </div>
-                <div class="mb-col-2-1-1-1 margin-l-0-0-0">
-                    <div class="mb-flex-row preview padding-0-0-0-0 h-100 margin-l-0-0-0">
-                        <mb-display className="mb-col-4-3-2-1 bg-green-500" content="This will have 4 grid in desktop width"></mb-display>
-                        <mb-display className="mb-col-4-3-2-1 bg-blue-500" content="This will have 3 grid in laptop width"></mb-display>
-                        <mb-display className="mb-col-4-3-2-1 bg-purple-500" content="This will have 2 grid in tablet width"></mb-display>
-                        <mb-display className="mb-col-4-3-2-1 bg-pink-500" content="This will have 1 grid in mobile width"></mb-display>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <div class="mb-flex-row preview margin-0-0-0-0 h-100">
+                        <mb-display className="mb-col-4-3-2-1 bg-green-500"
+                            content="This will have 4 grid in desktop width"></mb-display>
+                        <mb-display className="mb-col-4-3-2-1 bg-blue-500"
+                            content="This will have 3 grid in laptop width"></mb-display>
+                        <mb-display className="mb-col-4-3-2-1 bg-purple-500"
+                            content="This will have 2 grid in tablet width"></mb-display>
+                        <mb-display className="mb-col-4-3-2-1 bg-pink-500"
+                            content="This will have 1 grid in mobile width"></mb-display>
                     </div>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-css mixin comment="Due to limitless options grid system is based on a mixin"
+                        additional="@mixin grid-mixin($grid-number, $col-or-row, $grid-min-max : false, $grid-min-max-value : auto, $grid-min-max-direction : 'start'); row-gap and column-gap is entirely up to you!"
+                        classText="mb-col-4-3-2-1" :cssCode="firstOne">
+                        <template slot="inner"> <br /> </template>
+                    </mb-css>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-display className="grid-mixin">
+                        <template slot="content">
+                            <div class="bg-red-100 w-100 h-100"></div>
+                            <div class="bg-red-200 w-100 h-100"></div>
+                            <div class="bg-red-300 w-100 h-100"></div>
+                            <div class="bg-red-400 w-100 h-100"></div>
+                            <div class="bg-red-500 w-100 h-100"></div>
+                            <div class="bg-red-600 w-100 h-100"></div>
+                            <div class="bg-red-700 w-100 h-100"></div>
+                            <div class="bg-red-800 w-100 h-100"></div>
+                            <div class="bg-red-900 w-100 h-100"></div>
+                        </template>
+                    </mb-display>
+                </div>
+                <div class="mb-col-1-1-1-1">
+                    <h2 class="caption-xl padding-xl-0"> Utilities </h2>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-html markup="div" classText="padding-xl-0">
+                        <template slot="inner"> <br /> </template>
+                    </mb-html>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-display className="bg-green-300 padding-xl-0" content="">
+                        <template slot="content">
+                            <mb-description text="padding-xl-0 Padding works with either vertical horizontal" />
+                        </template>
+                    </mb-display>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-html markup="div" classText="padding-xl-l-xs-m">
+                        <template slot="inner"> <br /> </template>
+                    </mb-html>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-display className="bg-green-400 padding-xl-l-xs-m"
+                        content="or top right bottom left just like CSS">
+                        <template slot="content">
+                            <mb-description text="or top right bottom left just like CSS" /></template>
+                    </mb-display>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-html markup="div" classText="margin-xl-l-xs-m">
+                        <template slot="inner"> <br /> </template>
+                    </mb-html>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-display className="bg-green-500 margin-xl-l-xs-m" content="Just like margin :)">
+                        <template slot="content">
+                            <mb-description text="Just like margin :)" /></template>
+                    </mb-display>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-html markup="div" classText="w-100">
+                        <template slot="inner"> <br /> </template>
+                    </mb-html>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-display className="bg-teal-600 margin-0-0-l-0" content="Enjoy!">
+                        <template slot="content">
+                            <mb-description text="width: 100%" /></template>
+                    </mb-display>
+                </div>
+                 <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-html markup="div" classText="h-100">
+                        <template slot="inner"> <br /> </template>
+                    </mb-html>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-display className="bg-teal-300 padding-xl-0" content="">
+                        <template slot="content">
+                            <mb-description text="height: 100% as usual" />
+                        </template>
+                    </mb-display>
                 </div>
             </div>
         </div>
@@ -443,9 +533,16 @@
 
 <script>
     import MbHtml from '@/components/CodeBlockTissues/MbHtml'
+    import MbCss from '@/components/CodeBlockTissues/MbCss'
     import MbDescription from '@/components/CodeBlockTissues/MbDescription'
     import MbDisplay from '@/components/CodeBlockTissues/MbDisplay'
     export default {
+        data: () => ({
+            firstOne: [{
+                key: '@include',
+                value: "grid-mixin(5, 'col', true, 250px, 'start')"
+            }]
+        }),
         props: {
             title: {
                 type: String,
@@ -454,6 +551,7 @@
         },
         components: {
             MbHtml,
+            MbCss,
             MbDescription,
             MbDisplay
         },
@@ -483,7 +581,8 @@
             width: $mobile-breakpoint/4;
             height: $mobile-breakpoint/4;
         }
-        .commented-out{
+
+        .commented-out {
             color: $color-gray-500;
             padding-left: $space-xxl;
         }
