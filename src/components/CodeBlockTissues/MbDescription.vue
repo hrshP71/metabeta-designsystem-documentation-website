@@ -1,5 +1,5 @@
 <template>
-  <div class="preview h-100 padding-0-xl">
+  <div :class="className" class="preview h-100 padding-0-xl">
         <p class="text-s"> {{text}} </p>
   </div>
 </template>
@@ -8,6 +8,10 @@
 export default {
     props:{
         text:{
+            type: String,
+            default: '',
+        },
+        className:{
             type: String,
             default: '',
         }

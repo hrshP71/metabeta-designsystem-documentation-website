@@ -465,8 +465,113 @@
                         </template>
                     </mb-display>
                 </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-html markup="div" classText="display-grid-flex-none-block">
+                        <template slot="inner"> <br /> </template>
+                    </mb-html>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0 display-grid-flex-none-block">
+                    <mb-description className="bg-cyan-400"
+                        text="display is also universal throughout browser sizes, don't forget, Desktop first!" />
+                </div>
+                <div class="text-l padding-xl-l">
+                    <h3 class="heading-xl padding-0-0-xl-0"> For flex/block aligning we have mixins and classes </h3>
+                    <ul>
+                        <li>
+                            @mixin flex-center-center{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            }</li>
+                        <li>
+                            @mixin flex-center-start{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            }
+                        </li>
+                        <li>
+                            @mixin flex-center-end{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            }
+                        </li>
+                        <li>
+                            @mixin flex-center-between{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            }
+                        </li>
+                        <li>
+                            .flex-wrap{
+                            display: flex;
+                            flex-wrap: wrap;
+                            }
+                        </li>
+                        <li>
+                            .align-center{
+                            align-items: center;
+                            }
+                        </li>
+                        <li>
+                            .align-end{
+                            align-items: flex-end;
+                            }
+                        </li>
+                        <li>
+                            .align-start{
+                            align-items: flex-start;
+                            }
+                        </li>
+                        <li>
+                            .text-center{
+                            text-align: center;
+                            }
+                        </li>
+                        <li>
+                            .text-start{
+                            text-align: left;
+                            }
+                        </li>
+                        <li>
+                            .text-end{
+                            text-align: right;
+                            }
+                        </li>
+                    </ul>
+                </div>
                 <div class="mb-col-1-1-1-1">
                     <h2 class="caption-xl padding-xl-0"> Utilities </h2>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-css mixin comment="Border radius mixin"
+                        additional="5 options available : xs, s, m, l, circle"
+                        classText=".rounded" :cssCode="secondOne">
+                        <template slot="inner"> <br /> </template>
+                    </mb-css>
+                </div>
+                 <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-display className="" content="">
+                        <template slot="content">
+                            <div class="circle bg-purple-600"></div>
+                        </template>
+                    </mb-display>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-css mixin comment="Box shadow mixin"
+                        additional='@mixin shadow($elevation:0, $direction: "bottom", $color: $color-gray-100)'
+                        classText=".rounded" :cssCode="thirdOne">
+                        <template slot="inner"> <br /> </template>
+                    </mb-css>
+                </div>
+                 <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-display className="" content="">
+                        <template slot="content">
+                            <div class="shadow bg-purple-100"></div>
+                        </template>
+                    </mb-display>
                 </div>
                 <div class="mb-col-2-1-1-1 margin-s-0">
                     <mb-html markup="div" classText="padding-xl-0">
@@ -514,7 +619,19 @@
                             <mb-description text="width: 100%" /></template>
                     </mb-display>
                 </div>
-                 <div class="mb-col-2-1-1-1 margin-s-0">
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-html markup="div" classText="h-100">
+                        <template slot="inner"> <br /> </template>
+                    </mb-html>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
+                    <mb-display className="bg-teal-300 padding-xl-0" content="">
+                        <template slot="content">
+                            <mb-description text="height: 100% as usual" />
+                        </template>
+                    </mb-display>
+                </div>
+                <div class="mb-col-2-1-1-1 margin-s-0">
                     <mb-html markup="div" classText="h-100">
                         <template slot="inner"> <br /> </template>
                     </mb-html>
@@ -541,6 +658,14 @@
             firstOne: [{
                 key: '@include',
                 value: "grid-mixin(5, 'col', true, 250px, 'start')"
+            }],
+            secondOne: [{
+                key: '@include',
+                value: "border-radius('circle')"
+            }],
+            thirdOne: [{
+                key: '@include',
+                value: "shadow($space-xxxl, $color: $color-red-700);",
             }]
         }),
         props: {
@@ -565,7 +690,17 @@
 
     #app {
         margin-top: 100px;
-
+        .circle{
+            @include border-radius('circle');
+            width: $space-xxxl;
+            height: $space-xxxl;
+        }
+        .shadow{
+            @include shadow($space-xxxl,$color: $color-red-700);
+            @include border-radius(l);
+            width: $space-xxxl;
+            height: $space-xxxl;
+        }
         .additional {
             color: $color-white;
             background-color: $color-indigo-800;

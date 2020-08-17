@@ -29,4 +29,8 @@ export default {
     .grid-mixin{
         @include grid-mixin(5, 'col', true, 250px, 'start');
     }
+    .circle{
+        margin: auto;
+        @include border-radius('circle');
+    }
 </style>
