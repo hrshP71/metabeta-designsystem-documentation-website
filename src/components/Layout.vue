@@ -632,14 +632,16 @@
                     </mb-display>
                 </div>
                 <div class="mb-col-2-1-1-1 margin-s-0">
-                    <mb-html markup="div" classText="h-100">
+                     <mb-css mixin comment="Aspect Ratio Mixin"
+                        additional="options are: 'square', 'golden', 'landscape', 'portrait', 'video'"
+                        classText=".rounded" :cssCode="forthOne">
                         <template slot="inner"> <br /> </template>
-                    </mb-html>
+                    </mb-css>
                 </div>
                 <div class="mb-col-2-1-1-1 margin-s-0">
-                    <mb-display className="bg-teal-300 padding-xl-0" content="">
+                    <mb-display className="aspect-ratio" content="Golden aspect ratio">
                         <template slot="content">
-                            <mb-description text="height: 100% as usual" />
+                            <div class="aspect-ratio bg-orange-500"/>
                         </template>
                     </mb-display>
                 </div>
@@ -666,6 +668,10 @@
             thirdOne: [{
                 key: '@include',
                 value: "shadow($space-xxxl, $color: $color-red-700);",
+            }],
+            forthOne: [{
+                key: '@include',
+                value: "aspect-ratio('golden', 500px)"
             }]
         }),
         props: {
@@ -720,6 +726,9 @@
         .commented-out {
             color: $color-gray-500;
             padding-left: $space-xxl;
+        }
+        .aspect-ratio{
+            @include aspect-ratio('golden', 500px);
         }
     }
 </style>

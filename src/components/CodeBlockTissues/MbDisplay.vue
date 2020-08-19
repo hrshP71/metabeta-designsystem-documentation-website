@@ -1,5 +1,6 @@
 <template>
     <div class="h-100 display-flex-flex-flex-flex" :class="className">
+        <p class="absolute-mixin" v-if="content"> {{content}} </p>
         <slot class="margin-l-0-0-0" name="content"></slot>
     </div>
 </template>
@@ -32,5 +33,8 @@ export default {
     .circle{
         margin: auto;
         @include border-radius('circle');
+    }
+    .absolute-mixin{
+        @include absolute(50,50);
     }
 </style>
